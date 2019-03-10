@@ -18,8 +18,12 @@ dependencies {
 	compile("org.springframework:spring-context:5.1.5.RELEASE")
 	compile("org.springframework:spring-aop:5.1.5.RELEASE")
 
-	compile("org.slf4j:slf4j-api:1.7.26")
+//	compile("org.slf4j:slf4j-api:1.7.26")
+	compile("org.slf4j:jcl-over-slf4j:1.7.26")
 	compile("ch.qos.logback:logback-core:1.2.3")
+
+	compile("org.aspectj:aspectjrt:1.9.2")
+	compile("org.aspectj:aspectjweaver:1.9.2")
 
 	compileOnly("org.projectlombok:lombok:1.18.6")
 
