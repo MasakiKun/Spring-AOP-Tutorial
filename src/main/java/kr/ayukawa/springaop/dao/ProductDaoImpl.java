@@ -31,7 +31,8 @@ public class ProductDaoImpl implements ProductDao {
 		return repo.stream()
 				.filter(p -> p.getName().equals(name))
 				.findFirst()
-				.orElse(new Product());
+				//.orElse(new Product());
+				.orElseThrow();
 	}
 
 	@Override

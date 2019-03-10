@@ -29,5 +29,7 @@ public class EntryPoint {
 		dao.insert(ballpen);
 
 		System.out.println(dao.findAllProducts());
+
+		dao.findByName("만년필");
 	}
 }

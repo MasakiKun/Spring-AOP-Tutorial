@@ -26,5 +26,6 @@ dependencies {
 
 	compileOnly("org.projectlombok:lombok:1.18.6")
 
+	testCompile("org.junit.platform:junit-platform-launcher:1.4.0")
 	testCompile("org.junit.jupiter:junit-jupiter-api:5.4.0")
 }
