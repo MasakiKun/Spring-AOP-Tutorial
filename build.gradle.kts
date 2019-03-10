@@ -15,6 +15,7 @@ repositories {
 
 dependencies {
 	compile("org.springframework:spring-core:5.1.5.RELEASE")
+	compile("org.springframework:spring-context:5.1.5.RELEASE")
 	compile("org.springframework:spring-aop:5.1.5.RELEASE")
 
 	compile("org.slf4j:slf4j-api:1.7.26")
