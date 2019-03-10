@@ -1,10 +1,14 @@
 package kr.ayukawa.springaop.dao;
 
 import kr.ayukawa.springaop.model.Product;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
+@Qualifier("productDao")
 public class ProductDaoImpl implements ProductDao {
 	private List<Product> repo = new ArrayList<>();
 

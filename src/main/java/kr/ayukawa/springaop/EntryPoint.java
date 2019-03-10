@@ -1,19 +1,31 @@
 package kr.ayukawa.springaop;
 
+import kr.ayukawa.springaop.config.AppConfig;
 import kr.ayukawa.springaop.dao.ProductDao;
 import kr.ayukawa.springaop.model.Product;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Component;
 
+import java.util.Map;
+
+@Component
 public class EntryPoint {
-	public static void main(String[] args) {
-		ApplicationContext ctx = new ClassPathXmlApplicationContext("application-context.xml");
+	@Autowired
+	ProductDao dao;
 
+	public static void main(String[] args) {
+		ApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
+		EntryPoint ep = ctx.getBean("entryPoint", EntryPoint.class);
+		ep.execute();
+	}
+
+	public void execute() {
 		Product pencil = new Product("연필", 1000);
 		Product sharp = new Product("샤프", 1300);
 		Product ballpen = new Product("볼펜", 2000);
-
-		ProductDao dao = ctx.getBean("productDao", ProductDao.class);
 
 		dao.insert(pencil);
 		dao.insert(sharp);
