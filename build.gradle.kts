@@ -21,4 +21,6 @@ dependencies {
 	compile("ch.qos.logback:logback-core:1.2.3")
 
 	compileOnly("org.projectlombok:lombok:1.18.6")
+
+	testCompile("org.junit.jupiter:junit-jupiter-api:5.4.0")
 }

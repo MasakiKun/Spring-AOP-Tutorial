@@ -1,11 +1,9 @@
 package kr.ayukawa.springaop.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 @ToString
+@NoArgsConstructor
 @AllArgsConstructor
 public class Product {
 	@Getter @Setter
